@@ -2,8 +2,8 @@ package Search.binary;
 
 public class OrderAgnosticBS {
     public static void main(String[] args) {
-        int[] arr={12,17,19,34,67,89};
-        int target=19;
+        int[] arr={89,70,60,30};
+        int target=30;
         System.out.println(orderagnosticBS(arr,target));
     }
 
@@ -21,16 +21,16 @@ public class OrderAgnosticBS {
             int mid = start + (end - start) / 2;
             if (isasync) {
                 if (arr[mid] > target) {
-                    end = mid;
+                    end = mid-1;
                 } else {
-                    start = mid - 1;
+                    start = mid+1;
                 }
 
             } else {
                 if (arr[mid] < target) {
-                    end = mid;
+                    end = mid-1;
                 } else {
-                    start = mid - 1;
+                    start = mid + 1;
                 }
             }
             if (arr[mid] == target) {
