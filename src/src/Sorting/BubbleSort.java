@@ -48,9 +48,9 @@ public class BubbleSort {
 
     static void bubble(int[] arr) {
         boolean swapped;
-      for (int i = 0; i < arr.length; i++) {
+      for (int i = 0; i < arr.length; i++) { //for every pass,highest value comes at end
           swapped=false;
-          for (int j = 1; j < arr.length-i ; j++) {  //for every pass,highest value comes at end
+          for (int j = 1; j < arr.length-i ; j++) {
             if(arr[j]<arr[j-1]){
                 int temp=arr[j];
                 arr[j]=arr[j-1];
